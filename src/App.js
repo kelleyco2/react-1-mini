@@ -51,9 +51,9 @@ class App extends Component {
         <label>Name:</label>
         <input onChange={e => this.updateName(e)}/>
         <button onClick={() => this.handleClick()}>Add Friend</button>
-        {this.state.friends.map(friend => {
+        {this.state.friends.map((friend, i) => {
           return (
-            <div>
+            <div key ={i}>
               <div>{friend.name}</div>
               <img width={200} height={200} src={friend.picture}/>
             </div>
